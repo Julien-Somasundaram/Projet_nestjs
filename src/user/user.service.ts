@@ -1,8 +1,9 @@
-import { Injectable } from "@nestjs/common";
+import { Injectable } from '@nestjs/common';
+import { User } from './model/user';
 
 @Injectable()
 export class UserService {
-    getTest(val : number): number {
-        return val;
+  getUser(username: string): User {
+    return { username, createdAt: new Date('1994-04-12') };
   }
 }
